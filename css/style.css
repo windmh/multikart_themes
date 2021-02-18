@@ -1020,18 +1020,18 @@ ul li a span.sub-arrow::before {
   padding-bottom: 170px;
 }
 
-.full-banner.parallax{
+.full-banner.parallax {
   background-attachment: fixed;
 }
 
-.full-banner .banner-contain{
+.full-banner .banner-contain {
   padding: 0 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.full-banner .banner-contain > div{
+.full-banner .banner-contain > div {
   text-align: center;
 }
 
@@ -1065,11 +1065,15 @@ ul li a span.sub-arrow::before {
 /* parallax banner end */
 
 /* special products */
-.products-block{
+.special-products {
+  padding-bottom: 70px;
+}
+
+.products-block {
   padding: 0 15px;
 }
 
-.tabs{
+.tabs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1084,22 +1088,240 @@ ul li a span.sub-arrow::before {
   text-transform: uppercase;
 }
 
-.tabs li.current{
+.tabs li.current {
   color: var(--color-default);
 }
 
-.products-contain{
+.products-contain {
   display: grid;
-  grid-template-columns: repeat(4 ,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
 
-.tab-content{
+.tab-content {
   display: none;
 }
 
-.tab-content.current{
+.tab-content.current {
   display: block;
 }
 /* special products end */
+
+/* service */
+.service {
+  padding: 0 15px;
+}
+
+.service > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: solid 1px #dddddd;
+  border-bottom: solid 1px #dddddd;
+}
+
+.service-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-block:nth-child(2) {
+  border-left: solid 1px #dddddd;
+  border-right: solid 1px #dddddd;
+}
+
+.service-block svg {
+  height: 60px;
+  width: 60px;
+  margin-right: 15px;
+}
+
+@keyframes svgScales {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service-block:hover svg {
+  animation: svgScales 1s;
+}
+
+.service-block .media {
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.service-block h4 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.service-block:hover h4 {
+  color: var(--color-default);
+  transition: all 0.2s;
+}
+
+.service-block p {
+  text-transform: capitalize;
+}
+/* service end */
+
+/* blogs */
+
+.blogs-contain {
+  padding: 0 15px;
+}
+
+.blog-top {
+  position: relative;
+}
+
+.blog-top::before,
+.blog-top::after,
+.blog-top span::before,
+.blog-top span::after {
+  background: var(--color-default);
+  width: 25%;
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s steps(4);
+  z-index: 1;
+  bottom: 100%;
+  top: 0;
+}
+
+.blog-top::before {
+  left: 0;
+  transition-delay: 0;
+}
+
+.blog-top::after {
+  left: 25%;
+  transition-delay: 0.05s;
+}
+
+.blog-top span::before {
+  left: 50%;
+  transition-delay: 0.1s;
+}
+
+.blog-top span::after {
+  left: 75%;
+  transition-delay: 0.15s;
+}
+
+.blog-top:hover:before {
+  opacity: 0.5;
+  bottom: 0;
+}
+
+.blog-top:hover::after {
+  opacity: 0.5;
+  bottom: 0;
+}
+
+.blog-top:hover span::before {
+  opacity: 0.5;
+  bottom: 0;
+}
+
+.blog-top:hover span::after {
+  opacity: 0.5;
+  bottom: 0;
+}
+
+.blog-detail {
+  padding: 0 15px;
+  text-align: center;
+}
+
+.blog-detail h4 {
+  margin-top: 20px;
+  color: var(--color-default);
+}
+
+.blog-detail p {
+  position: relative;
+  text-transform: uppercase;
+  color: #222222;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.blog-detail:hover p {
+  color: var(--color-default);
+  transition: all 0.3s;
+}
+
+.blog-detail p::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 75px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-default);
+}
+
+.blog-detail h6 {
+  letter-spacing: 1.4px;
+  line-height: 1;
+}
+
+/* blogs end */
+
+/* instagram */
+.inst-box {
+  position: relative;
+  overflow: hidden;
+}
+
+h2.title-borderless {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.inst-box .overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-default);
+  top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(3) rotate(90deg);
+}
+
+.inst-box .overlay i{
+  font-size: 60px;
+  color: #ffffff;
+}
+
+.inst-box:hover .overlay{
+  opacity: 0.5;
+  transform: scale(1) rotate(0);
+}
+/* instagram end */

@@ -36,6 +36,27 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  var swiper = new Swiper('.swiper-blog', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 5000,
+    },
+    loop:true,
+  });
+});
+
+$(document).ready(function () {
+  var swiper = new Swiper('.swiper-inst', {
+    slidesPerView: 6,
+    autoplay: {
+      delay: 5000,
+    },
+    loop:true,
+  });
+});
+
 // products tabs
 $(document).ready(function(){
 	
