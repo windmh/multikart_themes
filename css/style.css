@@ -2681,10 +2681,138 @@ h3.collection-block-title:after {
   grid-row-gap: 30px;
   grid-column-gap: 30px;
 }
-
 /* tab-product end */
-
 /* Product-page end*/
+
+/* BLOG-PAGE */
+.blog-page-contain {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.blog-page-left {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.blog-page-right {
+  flex: 1;
+}
+
+.blog-page .theme-card {
+  padding: 30px;
+  border: 1px solid #dddddd;
+}
+
+.blog-page .theme-card h4 {
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.blog-page .theme-card .recent-blog li + li {
+  margin-top: 30px;
+}
+
+.blog-page .theme-card .recent-blog li img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.blog-page .theme-card h6 {
+  font-weight: 600;
+  line-height: 20px;
+  color: #222222;
+}
+
+.blog-page .theme-card + .theme-card {
+  margin-top: 30px;
+}
+
+.blog-page .theme-card .popular-blog li + li {
+  margin-top: 30px;
+}
+
+.blog-page .theme-card .popular-blog li .blog-date {
+  height: 70px;
+  max-width: 70px;
+  width: 100%;
+  background: var(--color-default);
+  padding: 15px;
+  margin-right: 15px;
+}
+
+.blog-page .theme-card .popular-blog li .blog-date span {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.blog-page .theme-card p {
+  line-height: 20px;
+  color: #555555;
+}
+
+.blog-page .theme-card .popular-blog li p {
+  margin-top: 10px;
+}
+
+.blog-page .blog-page-right .blog-media {
+  display: flex;
+  align-items: center;
+}
+
+.blog-page .blog-page-right .blog-media + .blog-media {
+  margin-top: 30px;
+}
+
+.blog-page .blog-media .blog-left,
+.blog-page .blog-media .blog-right {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.blog-page .blog-media .blog-right h6 {
+  color: var(--color-default);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.blog-page .blog-media .blog-right h4 {
+  line-height: 1.2;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.blog-page .blog-media .blog-right ul {
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.blog-page .blog-media .blog-right ul li {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.blog-page .blog-media .blog-right ul li + li {
+  padding-left: 15px;
+  margin-left: 15px;
+  border-left: 1px solid #dddddd;
+}
+
+.blog-page .blog-media .blog-right p {
+  line-height: 1.5;
+  letter-spacing: 0.54px;
+}
+
+/* BLOG-PAGE END */
 
 /* REPONSIVE */
 /* header */
@@ -2811,6 +2939,26 @@ h3.collection-block-title:after {
   }
   /* tab-product end */
   /* PRODUCT-PAGE END */
+
+  /* BLOG-PAGE */
+
+  .blog-page-left {
+    width: calc(100% / 3);
+  }
+  /* blog-page-right */
+  .blog-page .blog-page-right .blog-media {
+    display: block;
+  }
+  .blog-page .blog-media .blog-left,
+  .blog-page .blog-media .blog-right {
+    width: 100%;
+  }
+
+  .blog-page .blog-media .blog-right {
+    margin-top: 15px;
+  }
+  /* blog-page-right end */
+  /* BLOG-PAGE END */
 }
 
 @media screen and (max-width: 992px) {
@@ -3029,6 +3177,16 @@ h3.collection-block-title:after {
 
   /* tab_product end */
   /* PRODUCT_PAGE END */
+
+  /* BLOG-PAGE */
+
+  .blog-page-left {
+    width: 41.66666666%;
+  }
+  /* blog-page-right */
+
+  /* blog-page-right end */
+  /* BLOG-PAGE END */
 }
 
 @media screen and (max-width: 768px) {
@@ -3191,9 +3349,25 @@ h3.collection-block-title:after {
   .tab-block iframe {
     max-width: 100%;
   }
-
   /* tab-product end */
   /* PRODUCT-PAGE END */
+  .blog-page-contain {
+    flex-wrap: wrap;
+  }
+  .blog-page-left {
+    width: 100%;
+  }
+
+  .blog-page-right {
+    order: -1;
+  }
+  /* BLOG-PAGE */
+  /* blog-page-right */
+  .blog-page .blog-media:last-child {
+    margin-bottom: 30px;
+  }
+  /* blog-page-right end */
+  /* BLOG-PAGE END */
 }
 
 @media screen and (max-width: 576px) {
@@ -3337,6 +3511,18 @@ h3.collection-block-title:after {
   }
   /* tab-product end */
   /* PRODUCT-PAGE END */
+
+  /* BLOG-PAGE */
+  .blog-page .blog-media .blog-right ul li {
+    display: block;
+  }
+
+  .blog-page .blog-media .blog-right ul li + li {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+  }
+  /* BLOG-PAGE END */
 }
 
 @media screen and (max-width: 420px) {
