@@ -326,3 +326,43 @@ $(document).ready(function () {
     $(".collection-filter").removeClass("show");
   });
 });
+
+// product page
+
+$(document).ready(function () {
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 30,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".btn-product-next",
+      prevEl: ".btn-product-prev",
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+});
+
+// tab-product of product_page
+$(document).ready(function () {
+  //alert('here');
+
+  $(".tab-list a").click(function () {
+    $(".tab-block").hide();
+    $(".tab-list a.active").removeClass("active");
+    $(this).addClass("active");
+
+    var tab = $(this).attr("href");
+    $(tab).fadeIn(1000);
+
+    return false; // prevents link action
+  }); // end click
+
+  $(".tab-list li:first a").click();
+}); // end ready
