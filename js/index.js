@@ -366,3 +366,44 @@ $(document).ready(function () {
 
   $(".tab-list li:first a").click();
 }); // end ready
+
+// about-page-team of about-page
+$(document).ready(function () {
+  var swiper = new Swiper(".team-swiper", {
+    slidesPerView: 1,
+    slidesPerGroup: 2,
+    loop: true,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 991px
+      993: {
+        slidesPerView: 2,
+      },
+    },
+  });
+});
+
+// our-team of about-page
+$(document).ready(function () {
+  var swiper = new Swiper(".swiper-our-team", {
+    slidesPerView: 2,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+    breakpoints: {
+      // when window width is >= 991px
+      993: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+    navigation: {
+      nextEl: ".our-team-next",
+      prevEl: ".our-team-prev",
+    },
+  });
+});
